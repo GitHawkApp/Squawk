@@ -7,6 +7,6 @@ Pod::Spec.new do |spec|
   spec.summary      = 'Quick & interactive alerts.'
   spec.source       = { :git => 'https://github.com/GitHawkApp/Squawk.git', :tag => spec.version.to_s }
   spec.source_files = 'Source/*.swift'
-  spec.platform     = :ios, '9.0'
+  spec.platform     = :ios, '11.0'
   spec.swift_version = '4.0'
 end
