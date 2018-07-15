@@ -1,16 +1,16 @@
 PODS:
-  - MessageViewController (0.2.1)
+  - Squawk (0.1.0)
 
 DEPENDENCIES:
-  - MessageViewController (from `../MessageViewController.podspec`)
+  - Squawk (from `../Squawk.podspec`)
 
 EXTERNAL SOURCES:
-  MessageViewController:
-    :path: "../MessageViewController.podspec"
+  Squawk:
+    :path: "../Squawk.podspec"
 
 SPEC CHECKSUMS:
-  MessageViewController: 2544e213f578a58b698860ae801e06a6d93e5430
+  Squawk: ced86daf8ad0465a67b1f3f40dc655323fc89d8a
 
-PODFILE CHECKSUM: 74208e93c3daf191e681c80fcdf956f1603f9016
+PODFILE CHECKSUM: 5dc59d90da9b2a2290f6f9a5fe6a6f7caaf8a4d0
 
 COCOAPODS: 1.5.2

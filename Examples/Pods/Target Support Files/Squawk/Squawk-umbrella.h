@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double MessageViewControllerVersionNumber;
-FOUNDATION_EXPORT const unsigned char MessageViewControllerVersionString[];
+FOUNDATION_EXPORT double SquawkVersionNumber;
+FOUNDATION_EXPORT const unsigned char SquawkVersionString[];
 
