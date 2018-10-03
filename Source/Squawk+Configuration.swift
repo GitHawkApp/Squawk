@@ -10,6 +10,25 @@ import UIKit
 
 public extension Squawk {
 
+
+    public struct ErrorConfiguration {
+        let message: String
+        let file: String?
+        let line: String?
+        let function: String?
+
+        public init(
+            message: String,
+            file: String?,
+            line: String?,
+            function: String?
+        ) {
+            self.message = message
+            self.file = file
+            self.line = line
+            self.function = function
+        }
+    }
     public struct Configuration {
 
         let text: String

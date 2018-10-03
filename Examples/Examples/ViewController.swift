@@ -11,6 +11,14 @@ import Squawk
 
 class ViewController: UIViewController {
 
+    func reporter(message: String) {
+        print("Logging error....")
+    }
+
+    override func viewDidLoad() {
+        Squawk.shared.configureErrorReporter(with: reporter)
+    }
+
     @IBAction func onInfo(_ sender: Any) {
         Squawk.shared.show(config: Squawk.Configuration(
             text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
@@ -24,6 +32,15 @@ class ViewController: UIViewController {
             buttonTapHandler: {
                 print("did tap info button")
         }))
+    }
+
+    @IBAction func onError(_ sender: Any) {
+        Squawk.shared.showAndLogError(
+            config: Squawk.Configuration(
+                text: "Your network seems to be down"
+            ),
+            errorMessage: "An error occured"
+        )
     }
 
 }

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kvB-Ba-BBN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kvB-Ba-BBN">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -57,7 +57,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cyn-cy-XfB">
-                                <rect key="frame" x="87" y="518" width="200" height="40"/>
+                                <rect key="frame" x="87.5" y="518" width="200" height="40"/>
                                 <color key="backgroundColor" red="0.1960784314" green="0.49019607840000001" blue="0.84313725490000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="Au3-hK-Z2q"/>
@@ -71,7 +71,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fre-XY-Ut7">
-                                <rect key="frame" x="87" y="461" width="200" height="40"/>
+                                <rect key="frame" x="87.5" y="461" width="200" height="40"/>
                                 <color key="backgroundColor" red="0.15686274510000001" green="0.65490196079999996" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="QCA-WD-Hwk"/>
@@ -84,13 +84,27 @@
                                     <action selector="onInfo:" destination="osO-Rp-nHh" eventType="touchUpInside" id="snx-1j-F51"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nbe-Gl-p8R">
+                                <rect key="frame" x="87.5" y="413" width="200" height="40"/>
+                                <color key="backgroundColor" red="0.6888468861579895" green="0.13919923262595113" blue="0.11669686631770547" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Alert"/>
+                                <connections>
+                                    <action selector="onError:" destination="osO-Rp-nHh" eventType="touchUpInside" id="Y5c-7k-Dnv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="nbe-Gl-p8R" firstAttribute="height" secondItem="fre-XY-Ut7" secondAttribute="height" id="6Uc-X6-YOh"/>
                             <constraint firstItem="cyn-cy-XfB" firstAttribute="top" secondItem="fre-XY-Ut7" secondAttribute="bottom" constant="17" id="Mqa-gD-hxc"/>
+                            <constraint firstItem="fre-XY-Ut7" firstAttribute="top" secondItem="nbe-Gl-p8R" secondAttribute="bottom" constant="8" symbolic="YES" id="Qjs-ua-CcL"/>
                             <constraint firstItem="cyn-cy-XfB" firstAttribute="centerX" secondItem="83i-eb-xa2" secondAttribute="centerX" id="a9J-3N-hfT"/>
                             <constraint firstItem="spO-UG-XJt" firstAttribute="bottom" secondItem="cyn-cy-XfB" secondAttribute="bottom" constant="16" id="bac-or-OqW"/>
+                            <constraint firstItem="nbe-Gl-p8R" firstAttribute="centerX" secondItem="spO-UG-XJt" secondAttribute="centerX" id="d0F-bo-B1S"/>
                             <constraint firstItem="fre-XY-Ut7" firstAttribute="centerX" secondItem="83i-eb-xa2" secondAttribute="centerX" id="peT-XK-JaL"/>
+                            <constraint firstItem="nbe-Gl-p8R" firstAttribute="width" secondItem="fre-XY-Ut7" secondAttribute="width" id="wUt-jh-00O"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="spO-UG-XJt"/>
                     </view>

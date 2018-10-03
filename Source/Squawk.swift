@@ -10,8 +10,9 @@ import UIKit
 
 public class Squawk {
 
+    typealias Reporter = (String) -> ()
     private var activeItem: SquawkItem?
-    private var errorReporter: (String) -> ()
+    private var errorReporter: Reporter?
 
     init() {
         NotificationCenter.default.addObserver(
@@ -36,12 +37,14 @@ public class Squawk {
         errorMessage: String
         ) {
         self.show(in: view, config: config)
-        errorReporter(errorMessage)
+
+        guard let reporter = errorReporter else  { return }
+        reporter(errorMessage)
     }
 
     public func show(
         in view: UIView? = nil,
-        config: Squawk.Configuration,
+        config: Squawk.Configuration
         ) {
         let viewToUse: UIView?
         if view == nil, let top = UIApplication.shared.keyWindow?.rootViewController?.topMostChild {
@@ -123,3 +126,4 @@ public class Squawk {
     }
 
 }
+
