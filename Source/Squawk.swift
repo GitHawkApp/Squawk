@@ -11,6 +11,7 @@ import UIKit
 public class Squawk {
 
     private var activeItem: SquawkItem?
+    private var errorReporter: (String) -> ()
 
     init() {
         NotificationCenter.default.addObserver(
@@ -25,9 +26,22 @@ public class Squawk {
 
     public static let shared = Squawk()
 
+    public func configureErrorReporter(with reporter: @escaping (String) -> ()) {
+        errorReporter = reporter
+    }
+
+    public func showAndLogError(
+        in view: UIView? = nil,
+        config: Squawk.Configuration,
+        errorMessage: String
+        ) {
+        self.show(in: view, config: config)
+        errorReporter(errorMessage)
+    }
+
     public func show(
         in view: UIView? = nil,
-        config: Squawk.Configuration
+        config: Squawk.Configuration,
         ) {
         let viewToUse: UIView?
         if view == nil, let top = UIApplication.shared.keyWindow?.rootViewController?.topMostChild {
