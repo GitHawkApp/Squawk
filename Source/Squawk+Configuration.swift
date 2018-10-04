@@ -19,13 +19,13 @@ public extension Squawk {
 
         public init(
             message: String,
-            file: String?,
-            line: String?,
-            function: String?
-        ) {
+            file: String? = "",
+            line: Int? = 0,
+            function: String? = ""
+            ) {
             self.message = message
             self.file = file
-            self.line = line
+            self.line = String(describing: line)
             self.function = function
         }
     }
@@ -80,3 +80,4 @@ public extension Squawk {
     }
 
 }
+

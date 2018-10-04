@@ -11,7 +11,7 @@ import Squawk
 
 class ViewController: UIViewController {
 
-    func reporter(message: String) {
+    func reporter(errorConfig: Squawk.ErrorConfiguration) {
         print("Logging error....")
     }
 
@@ -35,12 +35,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func onError(_ sender: Any) {
-        Squawk.shared.showAndLogError(
-            config: Squawk.Configuration(
-                text: "Your network seems to be down"
-            ),
-            errorMessage: "An error occured"
-        )
+        Squawk.shared.showAndLogError(config: Squawk.Configuration(text: "Bad credentials"), errorConfig: Squawk.ErrorConfiguration(message: "Bad", file: #file, line: #line, function: #function))
     }
 
 }
