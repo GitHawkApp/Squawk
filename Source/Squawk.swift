@@ -10,7 +10,9 @@ import UIKit
 
 public class Squawk {
 
+    typealias Reporter = (Squawk.ErrorConfiguration) -> ()
     private var activeItem: SquawkItem?
+    private var errorReporter: Reporter?
 
     init() {
         NotificationCenter.default.addObserver(
@@ -24,6 +26,21 @@ public class Squawk {
     // MARK: Public API
 
     public static let shared = Squawk()
+
+    public func configureErrorReporter(with reporter: @escaping (Squawk.ErrorConfiguration) -> ()) {
+        errorReporter = reporter
+    }
+
+    public func showAndLogError(
+        in view: UIView? = nil,
+        config: Squawk.Configuration,
+        errorConfig: Squawk.ErrorConfiguration
+        ) {
+        self.show(in: view, config: config)
+
+        guard let reporter = errorReporter else  { return }
+        reporter(errorConfig)
+    }
 
     public func show(
         in view: UIView? = nil,
@@ -109,3 +126,5 @@ public class Squawk {
     }
 
 }
+
+

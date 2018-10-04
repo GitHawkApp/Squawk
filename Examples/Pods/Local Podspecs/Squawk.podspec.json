@@ -10,7 +10,7 @@
   },
   "summary": "Quick & interactive alerts.",
   "source": {
-    "git": "https://github.com/GitHawkApp/Squawk.git",
+    "git": "https://github.com/ehudadler/Squawk.git",
     "tag": "0.1.0"
   },
   "source_files": "Source/*.swift",
