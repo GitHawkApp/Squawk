@@ -71,7 +71,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fre-XY-Ut7">
-                                <rect key="frame" x="87.5" y="461" width="200" height="40"/>
+                                <rect key="frame" x="87" y="470" width="200" height="40"/>
                                 <color key="backgroundColor" red="0.15686274510000001" green="0.65490196079999996" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="QCA-WD-Hwk"/>
@@ -85,7 +85,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nbe-Gl-p8R">
-                                <rect key="frame" x="87.5" y="413" width="200" height="40"/>
+                                <rect key="frame" x="87" y="422" width="200" height="40"/>
                                 <color key="backgroundColor" red="0.6888468861579895" green="0.13919923262595113" blue="0.11669686631770547" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -98,7 +98,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="nbe-Gl-p8R" firstAttribute="height" secondItem="fre-XY-Ut7" secondAttribute="height" id="6Uc-X6-YOh"/>
-                            <constraint firstItem="cyn-cy-XfB" firstAttribute="top" secondItem="fre-XY-Ut7" secondAttribute="bottom" constant="17" id="Mqa-gD-hxc"/>
+                            <constraint firstItem="cyn-cy-XfB" firstAttribute="top" secondItem="fre-XY-Ut7" secondAttribute="bottom" constant="8" id="Mqa-gD-hxc"/>
                             <constraint firstItem="fre-XY-Ut7" firstAttribute="top" secondItem="nbe-Gl-p8R" secondAttribute="bottom" constant="8" symbolic="YES" id="Qjs-ua-CcL"/>
                             <constraint firstItem="cyn-cy-XfB" firstAttribute="centerX" secondItem="83i-eb-xa2" secondAttribute="centerX" id="a9J-3N-hfT"/>
                             <constraint firstItem="spO-UG-XJt" firstAttribute="bottom" secondItem="cyn-cy-XfB" secondAttribute="bottom" constant="16" id="bac-or-OqW"/>

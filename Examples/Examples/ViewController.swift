@@ -12,7 +12,14 @@ import Squawk
 class ViewController: UIViewController {
 
     func reporter(errorConfig: Squawk.ErrorConfiguration) {
-        print("Logging error....")
+        print("Error: \(errorConfig.message)")
+
+        guard let file = errorConfig.file,
+            let function = errorConfig.function,
+            let line = errorConfig.line else  { return }
+        print("File: ", file)
+        print("Function: ", function)
+        print("Line: ", line)
     }
 
     override func viewDidLoad() {
@@ -35,8 +42,23 @@ class ViewController: UIViewController {
     }
 
     @IBAction func onError(_ sender: Any) {
-        Squawk.shared.showAndLogError(config: Squawk.Configuration(text: "Bad credentials"), errorConfig: Squawk.ErrorConfiguration(message: "Bad", file: #file, line: #line, function: #function))
+        Squawk.shared.showAndLogError(
+            config: Squawk.Configuration(
+                text: "Bad credentials"
+            ),
+            errorConfig: Squawk.ErrorConfiguration(
+                message: """
+Although you appear to have the correct authorization credentials,
+the GitHawkApp organization has enabled OAuth App access restrictions, meaning that data
+access to third-parties is limited. For more information on these restrictions, including
+how to whitelist this app, visit
+https://help.github.com/articles/restricting-access-to-your-organization-s-data/
+""",
+                file: #file,
+                line: #line,
+                function: #function
+            )
+        )
     }
-
 }
 

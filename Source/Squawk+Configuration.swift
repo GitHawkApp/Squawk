@@ -10,18 +10,24 @@ import UIKit
 
 public extension Squawk {
 
-
     public struct ErrorConfiguration {
-        let message: String
-        let file: String?
-        let line: String?
-        let function: String?
+        public let message: String
+        public let file: String?
+        public let line: String?
+        public let function: String?
+
+        public init(message: String) {
+            self.message = message
+            self.file = nil
+            self.line = nil
+            self.function = nil
+        }
 
         public init(
             message: String,
-            file: String? = "",
-            line: Int? = 0,
-            function: String? = ""
+            file: String,
+            line: Int,
+            function: String
             ) {
             self.message = message
             self.file = file
@@ -29,6 +35,7 @@ public extension Squawk {
             self.function = function
         }
     }
+
     public struct Configuration {
 
         let text: String
@@ -80,4 +87,5 @@ public extension Squawk {
     }
 
 }
+
 
