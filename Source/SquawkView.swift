@@ -37,6 +37,7 @@ internal final class SquawkView: UIView {
         label.numberOfLines = 0
         label.textColor = configuration.textColor
         label.text = configuration.text
+        label.font = label.font.withSize(configuration.fontSize.rawValue)
         label.translatesAutoresizingMaskIntoConstraints = false
         label.backgroundColor = .clear
         contentView.addSubview(label)

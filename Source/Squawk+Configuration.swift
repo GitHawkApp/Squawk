@@ -14,6 +14,7 @@ public extension Squawk {
 
         let text: String
         let textColor: UIColor
+        let fontSize: FontSize
         let backgroundColor: UIColor
         let insets: UIEdgeInsets
         let maxWidth: CGFloat
@@ -30,6 +31,7 @@ public extension Squawk {
         public init(
             text: String,
             textColor: UIColor = .white,
+            fontSize: FontSize = .medium,
             backgroundColor: UIColor = UIColor(white: 0.2, alpha: 0.7),
             insets: UIEdgeInsets = UIEdgeInsets(top: 8, left: 15, bottom: 8, right: 15),
             maxWidth: CGFloat = 300,
@@ -45,6 +47,7 @@ public extension Squawk {
             ) {
             self.text = text
             self.textColor = textColor
+            self.fontSize = fontSize
             self.backgroundColor = backgroundColor
             self.insets = insets
             self.maxWidth = maxWidth
@@ -60,4 +63,12 @@ public extension Squawk {
         }
     }
 
+}
+
+public enum FontSize: CGFloat {
+    case smaller = 12
+    case small = 14
+    case medium = 16
+    case large = 18
+    case larger = 20
 }
